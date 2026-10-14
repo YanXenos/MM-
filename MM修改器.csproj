@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC148729-2B9A-4AE5-8A72-CB55AE10D3AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Doubledr</RootNamespace>
+    <AssemblyName>MM修改器</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+    <ApplicationIcon>MM修改器.ico</ApplicationIcon>
+    <StartupObject>Doubledr.Program</StartupObject>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\ItemType.cs" />
+    <Compile Include="Data\ListviewData.cs" />
+    <Compile Include="Data\menulist.cs" />
+    <Compile Include="Data\mm1data.cs" />
+    <Compile Include="Data\ModifyDatastruct.cs" />
+    <Compile Include="Data\static_data.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetail\checklistitem.cs" />
+    <Compile Include="ItemDetail\DatadictSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemDetail\DatadictSelect.Designer.cs">
+      <DependentUpon>DatadictSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetail\detail1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemDetail\detail1.Designer.cs">
+      <DependentUpon>detail1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetail\enengy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemDetail\enengy.Designer.cs">
+      <DependentUpon>enengy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetail\tankdetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemDetail\tankdetail.Designer.cs">
+      <DependentUpon>tankdetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\about.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\about.Designer.cs">
+      <DependentUpon>about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other\note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other\note.Designer.cs">
+      <DependentUpon>note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemDetail\enengy.resx">
+      <DependentUpon>enengy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\about.resx">
+      <DependentUpon>about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other\note.resx">
+      <DependentUpon>note.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MM修改器.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
